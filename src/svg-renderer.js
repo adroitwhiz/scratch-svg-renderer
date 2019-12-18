@@ -122,7 +122,7 @@ class SvgRenderer {
 
         img.onload = () => {
             this.loaded = true;
-            if (onFinish) onFinish();
+            if (onFinish) onFinish(img);
         };
         const svgText = this.toString(true /* shouldInjectFonts */);
         img.src = `data:image/svg+xml;utf8,${encodeURIComponent(svgText)}`;
